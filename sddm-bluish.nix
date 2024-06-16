@@ -2,7 +2,7 @@
 {
   sddm-bluish= stdenv.mkDerivation rec {
     pname = "sddm-theme-bluish";
-    version = "53f81e3";
+    version = "latest";
     dontBuild = true;
     installPhase = ''
       mkdir -p $out/share/sddm/themes
@@ -12,8 +12,8 @@
     {
     owner = "mateember";
     repo = "Bluish-Plasma-Themes";
-    rev = "95cf8297b1f88725700ee48c6a2e575f426b6ec3";
-    hash = "sha256-o2eM5bDDyI6C+1W9sBiglq7o/jMOND2w5A2SOtYPPpA=";
+    rev = "6d9c0fe0e54877971f9b56a788ebb2922103ceeb";
+    hash = "sha256-B/fyuhKquKBxOl28lf/GHuWcKRH4lQ7X5eUBuNQREpg=";
     };
   };
 }

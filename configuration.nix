@@ -212,8 +212,9 @@
     desktopManager.plasma6.enable = true;
     displayManager = {
       sddm.enable = true;
-      defaultSession = "plasmax11";
- #     sddm.theme = "sddm-theme-bluish";
+      defaultSession = "hyprland";
+      sddm.theme = "sddm-theme-bluish";
+      sddm.wayland.enable = true;
       autoLogin = {
         enable = false;
         user = "mate";
@@ -258,8 +259,8 @@
       tree
       starship
       zoxide
-      (callPackage ./sddm-bluish.nix { }).sddm-theme-bluish
- #     (callPackage ./sddm-andromeda.nix { }).sddm-theme-andromeda
+      (callPackage ./sddm-bluish.nix { }).sddm-bluish
+      (callPackage ./sddm-andromeda.nix { }).sddm-andromeda
       kdePackages.qtstyleplugin-kvantum
       kdePackages.kdecoration
       fuse
@@ -273,6 +274,7 @@
       podman-compose
       kdePackages.extra-cmake-modules
       pavucontrol
+      sddm-kcm
 
 
       #Development packages
