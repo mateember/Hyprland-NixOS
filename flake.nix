@@ -10,7 +10,7 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, chaotic, hyprland, ... }:
@@ -53,7 +53,7 @@
                 # TODO replace ryan with your own username
                 home-manager.users.mate = import ./home;
                 home-manager.backupFileExtension = "nixbk";
-                home-manager.extraSpecialArgs = { inherit pkgs; inherit pkgs-unstable; };
+                home-manager.extraSpecialArgs = { inherit pkgs; inherit pkgs-unstable; inherit hyprland;};
 
 
 

@@ -166,12 +166,7 @@
     {
       zsh.enable = true;
       steam.enable = true;
-      hyprland = {
-    	enable = true;
-    	#package = hyprland.packages.${pkgs.system}.hyprland;
-	systemd.setPath.enable = true;
-	xwayland.enable = true;
-  	};
+
     };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -212,7 +207,7 @@
     desktopManager.plasma6.enable = true;
     displayManager = {
       sddm.enable = true;
-      defaultSession = "hyprland";
+      defaultSession = "plasma";
       sddm.theme = "sddm-theme-bluish";
       sddm.wayland.enable = true;
       autoLogin = {
