@@ -213,7 +213,7 @@
     displayManager = {
       sddm.enable = true;
       defaultSession = "plasmax11";
-      sddm.theme = "sddm-theme-bluish";
+ #     sddm.theme = "sddm-theme-bluish";
       autoLogin = {
         enable = false;
         user = "mate";
@@ -258,9 +258,8 @@
       tree
       starship
       zoxide
-      (callPackage ./kde-bluish-sddm.nix { }).sddm-theme-bluish
-      #(callPackage ./xpadneo.nix { }).xpadneo-custom
-      #(callPackage ./lightly.nix {})
+      (callPackage ./sddm-bluish.nix { }).sddm-theme-bluish
+ #     (callPackage ./sddm-andromeda.nix { }).sddm-theme-andromeda
       kdePackages.qtstyleplugin-kvantum
       kdePackages.kdecoration
       fuse
@@ -274,8 +273,7 @@
       podman-compose
       kdePackages.extra-cmake-modules
       pavucontrol
-      #xone
-      #xpadneo
+
 
       #Development packages
       llvm
@@ -288,6 +286,7 @@
       bison
       lld
       elfutils
+      nix-prefetch-git
 
     ])
 
