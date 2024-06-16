@@ -1,4 +1,4 @@
-{ pkgs, config, hyprland, ...}:
+{ pkgs, config, hyprland, pkgs-unstable, ...}:
 {
   imports =
   [

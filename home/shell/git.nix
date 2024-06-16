@@ -4,10 +4,7 @@ programs.git = {
     enable = true;
     userName = "...";
     userEmail = "...";
-    extraConfig = {
-      credential.helper = "oauth";
-    };
-
 
   };
+  programs.git-credential-oauth.enable = true;
 }

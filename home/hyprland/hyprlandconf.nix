@@ -220,7 +220,7 @@ misc {
 }
 
 
-####WINDOWSRULES
+####WINDOWRULES
 
 #Window Rules
 
@@ -246,7 +246,7 @@ windowrulev2 = float,title:(Cider)
 windowrulev2 = size 60% 70%,title:(Cider)
 windowrulev2=float,center,class:(nm-connection-editor)
 windowrulev2=float,center,class:(cmst)
-windowrulev2 = float,class:(kitty)
+windowrulev2 = float,class:(alacritty)
 windowrulev2 = float,title:(KCalc)
 
 # brave Picture-in-Picture

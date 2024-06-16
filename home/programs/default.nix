@@ -19,6 +19,7 @@
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     git-credential-oauth
+    ranger
 
     #kdePackages.kdeconnect-kde
     blueman
