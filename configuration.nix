@@ -19,7 +19,7 @@
   opengl = {
     package = pkgs-unstable.mesa.drivers;
 
-    # if you also want 32-bit support (e.g for Steam)
+    # if you also want 32-bit support
     driSupport32Bit = true;
     package32 = pkgs-unstable.pkgsi686Linux.mesa.drivers;
   };

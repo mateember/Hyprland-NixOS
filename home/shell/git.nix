@@ -7,4 +7,5 @@ programs.git = {
 
   };
   programs.git-credential-oauth.enable = true;
+  programs.gh.enable = false;
 }
