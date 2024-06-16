@@ -261,6 +261,7 @@
       fuse
       sshfs-fuse
       alacritty
+      kitty
       killall
       btop
       fzf
