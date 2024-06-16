@@ -6,7 +6,7 @@ wayland.windowManager.hyprland.extraConfig = ''
 monitor=DP-3,1920x1080@75,0x0,1,vrr,2
 
 ###AUTOSTART
-
+#dsd
 exec-once=waybar
 exec-once = dunst
 exec-once = hyprpaper
@@ -206,7 +206,7 @@ dwindle {
 
 master {
     # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-    new_is_master = true
+    new_status = master
 }
 
 gestures {
