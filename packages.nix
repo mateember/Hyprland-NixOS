@@ -45,7 +45,8 @@
       kdePackages.extra-cmake-modules
       pavucontrol
       sddm-kcm
-      appimage-run
+      appimage-
+      alsa-utils
 
       #Development packages
       llvm
