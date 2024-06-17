@@ -2,13 +2,13 @@
   stdenv,
   fetchFromGitHub,
 }: {
-  sddm-andromeda = stdenv.mkDerivation rec {
-    pname = "sddm-theme-andromeda";
+  sddm-sugarcandy = stdenv.mkDerivation rec {
+    pname = "sddm-theme-sugarcandy";
     version = "8d7fe15d9df";
     dontBuild = true;
     installPhase = ''
       mkdir -p $out/share/sddm/themes
-      cp -aR $src/sddm $out/share/sddm/themes/sddm-theme-andromeda
+      cp -aR $src/sddm $out/share/sddm/themes/sddm-theme-sugarcandy
     '';
     src =
       fetchFromGitHub

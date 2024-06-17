@@ -10,8 +10,13 @@
   #Chaotic AUR
   chaotic.mesa-git.enable = true;
 
-
-
+/*  programs.hyprland = {
+    enable = true;
+    #systemd.enable = true;
+    package = hyprland.packages.${pkgs.system}.hyprland;
+    xwayland.enable = true;
+  };
+*/
   # System packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages =
@@ -24,7 +29,7 @@
       starship
       zoxide
       (callPackage ./customPackages/sddm-bluish.nix {}).sddm-bluish
-      (callPackage ./customPackages/sddm-andromeda.nix {}).sddm-andromeda
+      (callPackage ./customPackages/sddm-sugarcandy.nix {}).sddm-andromeda
       #(callPackage ./customPackages/HyprlandDesktop/default.nix { }).hyprland-desktop
       kdePackages.qtstyleplugin-kvantum
       kdePackages.kdecoration

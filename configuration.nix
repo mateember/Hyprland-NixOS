@@ -191,10 +191,12 @@
     xserver.enable = true;
     desktopManager.plasma6.enable = true;
     displayManager = {
+      sessionPackages = [ hyprland.packages.${pkgs.system}.hyprland ];
       sddm.enable = true;
-      defaultSession = "plasma";
+      defaultSession = "hyprland";
       sddm.theme = "sddm-theme-bluish";
       sddm.wayland.enable = true;
+      #sddm.extraPackages = [pkgs.kdePackages.kdecoration pkgs.kdePackages.sddm-kcm pkgs.libsForQt5.sddm-kcm pkgs.libsForQt5.sddm];
       autoLogin = {
         enable = false;
         user = "mate";
@@ -246,7 +248,7 @@
   xdg.portal = {
     enable = true;
     config.common.default = "*";
-    extraPortals = [pkgs.xdg-desktop-portal-kde pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [pkgs.xdg-desktop-portal-kde pkgs.xdg-desktop-portal-gtk];
   };
 
   #Sudo
