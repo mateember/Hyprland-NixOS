@@ -20,7 +20,7 @@
     xdg-desktop-portal-gtk
     git-credential-oauth
     ranger
-
+    glxinfo
     #kdePackages.kdeconnect-kde
     blueman
     rofi-wayland

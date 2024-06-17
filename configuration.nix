@@ -16,14 +16,14 @@
 #  xone.enable = true;
 #  xpadneo.enable = true;
 
-  opengl = {
+/*  opengl = {
     package = pkgs-unstable.mesa.drivers;
 
     # if you also want 32-bit support
     driSupport32Bit = true;
     package32 = pkgs-unstable.pkgsi686Linux.mesa.drivers;
   };
-
+*/
   };
 
   #flake and nix setting
@@ -110,6 +110,7 @@
       matchConfig.Name = "enp7s0";
       networkConfig.DHCP = "yes";
       networkConfig.IPv6AcceptRA = true;
+      networkConfig.DNS = "8.8.8.8 8.8.4.4 1.1.1.1 1.0.0.1";
 
 
       linkConfig.RequiredForOnline = "routable";
@@ -250,6 +251,8 @@
 
   };
 
+
+  chaotic.mesa-git.enable = true;
   # System packages
   nixpkgs.config.allowUnfree = true;
   #pkgs-unstable.config.allowUnfree = true;
@@ -268,8 +271,6 @@
       kdePackages.kdecoration
       fuse
       sshfs-fuse
-      alacritty
-      kitty
       killall
       btop
       fzf
@@ -301,6 +302,11 @@
     (with pkgs-unstable; [
       bat
       lact
+      kdePackages.polkit-kde-agent-1
+      kdePackages.kirigami
+      polkit_gnome
+      kitty
+      alacritty
     ]);
 
 
@@ -361,9 +367,10 @@
   fonts = {
     packages = with pkgs; [
       jetbrains-mono
+      fira-code
       roboto
       openmoji-color
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
     ];
 
     fontconfig = {

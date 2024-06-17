@@ -18,7 +18,12 @@
 
       system = "x86_64-linux";
       lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
+       pkgs = import nixpkgs {
+        config.allowUnfree = true;
+        localSystem = { inherit system; };
+
+
+      };
 
       #pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
       pkgs-unstable = import nixpkgs-unstable {
@@ -63,8 +68,10 @@
 
 
         specialArgs = {
+
           inherit pkgs-unstable;
           inherit hyprland;
+
         };
 
         };
