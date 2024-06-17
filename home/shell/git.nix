@@ -4,6 +4,6 @@
     userName = "...";
     userEmail = "...";
   };
-  programs.git-credential-oauth.enable = true;
+  #programs.git-credential-oauth.enable = true;
   programs.gh.enable = false;
 }
