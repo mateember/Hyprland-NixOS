@@ -1,0 +1,8 @@
+[Desktop Entry]
+    Type=Application
+    Name=Hyprland
+    Comment=A dynamic tiling Wayland compositor
+    Exec=Hyprland
+    TryExec=Hyprland
+    Icon=hyprland
+    DesktopNames=Hyprland

@@ -191,6 +191,7 @@
 
 
 
+
   systemd.packages = with pkgs-unstable; [ lact ];
   systemd.services.lactd = {
     enable = true; # this is true by default
@@ -211,6 +212,10 @@
 
     xserver.xkb.layout = "hu";
 
+
+
+
+
     # Plasma, SDDM
     xserver.enable = true;
     desktopManager.plasma6.enable = true;
@@ -223,7 +228,15 @@
         enable = false;
         user = "mate";
       };
+
+
+
     };
+
+
+
+
+
 
 
     blueman.enable = true;
@@ -265,8 +278,9 @@
       tree
       starship
       zoxide
-      (callPackage ./sddm-bluish.nix { }).sddm-bluish
-      (callPackage ./sddm-andromeda.nix { }).sddm-andromeda
+      (callPackage ./customPackages/sddm-bluish.nix { }).sddm-bluish
+      (callPackage ./customPackages/sddm-andromeda.nix { }).sddm-andromeda
+      #(callPackage ./customPackages/HyprlandDesktop/default.nix { }).hyprland-desktop
       kdePackages.qtstyleplugin-kvantum
       kdePackages.kdecoration
       fuse
