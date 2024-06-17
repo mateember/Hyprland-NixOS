@@ -106,7 +106,7 @@
       matchConfig.Name = "enp7s0";
       networkConfig.DHCP = "yes";
       networkConfig.IPv6AcceptRA = true;
-      networkConfig.DNS = "8.8.8.8 8.8.4.4 1.1.1.1 1.0.0.1";
+      networkConfig.DNS = "192.168.1.173";
 
       linkConfig.RequiredForOnline = "routable";
     };
