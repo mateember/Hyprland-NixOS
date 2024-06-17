@@ -41,6 +41,5 @@
       distrobox
     ]);
 
-
   services.kdeconnect.enable = true;
 }

@@ -191,7 +191,7 @@
     xserver.enable = true;
     desktopManager.plasma6.enable = true;
     displayManager = {
-      sessionPackages = [ hyprland.packages.${pkgs.system}.hyprland ];
+      sessionPackages = [hyprland.packages.${pkgs.system}.hyprland];
       sddm.enable = true;
       defaultSession = "hyprland";
       sddm.theme = "sddm-theme-bluish";

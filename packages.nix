@@ -6,17 +6,14 @@
   hyprland,
   ...
 }: {
-
   #Chaotic AUR
   chaotic.mesa-git.enable = true;
 
-/*  programs.hyprland = {
-    enable = true;
-    #systemd.enable = true;
-    package = hyprland.packages.${pkgs.system}.hyprland;
-    xwayland.enable = true;
-  };
-*/
+  imports = [
+    # Include the results of the hardware scan.
+    ./pkgs
+  ];
+
   # System packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages =
@@ -28,9 +25,6 @@
       tree
       starship
       zoxide
-      (callPackage ./customPackages/sddm-bluish.nix {}).sddm-bluish
-      (callPackage ./customPackages/sddm-sugarcandy.nix {}).sddm-sugarcandy
-      #(callPackage ./customPackages/HyprlandDesktop/default.nix { }).hyprland-desktop
       kdePackages.qtstyleplugin-kvantum
       kdePackages.kdecoration
       fuse

@@ -4,7 +4,7 @@
 }: {
   sddm-bluish = stdenv.mkDerivation rec {
     pname = "sddm-theme-bluish";
-    version = "latest";
+    version = "6d9c0fe0e54877971f9b56a788ebb2922103ceeb";
     dontBuild = true;
     installPhase = ''
       mkdir -p $out/share/sddm/themes
