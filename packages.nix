@@ -61,5 +61,6 @@
       polkit_gnome
       kitty
       alacritty
+      github-desktop
     ]);
 }

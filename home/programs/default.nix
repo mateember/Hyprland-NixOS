@@ -6,9 +6,6 @@
 }: {
   home.packages =
     (with pkgs; [
-      fastfetch
-      swww
-      waybar
       dunst
       hyprpaper
       hyprshade
@@ -31,15 +28,19 @@
       qt5ct
       qt6ct
       nwg-look
-      neovim
-      distrobox
       pyenv
       speedtest-cli
       #    vscode
     ])
     ++ (with pkgs-unstable; [
       vscode
+      neovim
+      fastfetch
+      swww
+      waybar
+      distrobox
     ]);
+
 
   services.kdeconnect.enable = true;
 }
