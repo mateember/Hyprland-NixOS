@@ -29,7 +29,7 @@
       starship
       zoxide
       (callPackage ./customPackages/sddm-bluish.nix {}).sddm-bluish
-      (callPackage ./customPackages/sddm-sugarcandy.nix {}).sddm-andromeda
+      (callPackage ./customPackages/sddm-sugarcandy.nix {}).sddm-sugarcandy
       #(callPackage ./customPackages/HyprlandDesktop/default.nix { }).hyprland-desktop
       kdePackages.qtstyleplugin-kvantum
       kdePackages.kdecoration
