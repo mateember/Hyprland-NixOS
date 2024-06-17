@@ -271,7 +271,7 @@
     portal = {
       enable = true;
       config.common.default = "*";
-      extraPortals = [pkgs.xdg-desktop-portal-kde pkgs.xdg-desktop-portal-gtk xdg-desktop-portal-hyprland];
+      extraPortals = [pkgs.xdg-desktop-portal-kde pkgs.xdg-desktop-portal-gtk hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland];
     };
   };
   #Sudo
