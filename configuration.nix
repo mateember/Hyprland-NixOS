@@ -107,7 +107,14 @@
       networkConfig.DHCP = "yes";
       networkConfig.IPv6AcceptRA = true;
       networkConfig.DNS = "192.168.1.173";
-
+      routes = [
+        {
+          routeConfig = {
+            InitialCongestionWindow = 10;
+            InitialAdvertisedReceiveWindow = 10;
+          };
+        }
+      ];
       linkConfig.RequiredForOnline = "routable";
     };
   };

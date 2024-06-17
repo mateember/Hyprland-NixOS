@@ -18,7 +18,6 @@
     zsh.enable = true;
     steam.enable = true;
     xfconf.enable = true;
-
   };
 
   # System packages
