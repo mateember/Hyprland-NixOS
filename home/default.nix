@@ -1,7 +1,8 @@
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hyprland
     ./programs
@@ -15,16 +16,15 @@
     homeDirectory = "/home/mate";
 
     file.".local/share/wayland-sessions/hyprland.desktop".text = ''
-    [Desktop Entry]
-    Type=Application
-    Name=Hyprland
-    Comment=A dynamic tiling Wayland compositor
-    Exec=Hyprland
-    TryExec=Hyprland
-    Icon=hyprland
-    DesktopNames=Hyprland
-  '';
-
+      [Desktop Entry]
+      Type=Application
+      Name=Hyprland
+      Comment=A dynamic tiling Wayland compositor
+      Exec=Hyprland
+      TryExec=Hyprland
+      Icon=hyprland
+      DesktopNames=Hyprland
+    '';
 
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage

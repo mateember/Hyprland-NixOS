@@ -1,12 +1,6 @@
-{config, ...}:
-{
-
-imports = [
-
-./git.nix
-#./sddm.nix
-
-
-];
-
+{config, ...}: {
+  imports = [
+    ./git.nix
+    #./sddm.nix
+  ];
 }
