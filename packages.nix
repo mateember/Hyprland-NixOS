@@ -47,6 +47,7 @@
       sddm-kcm
       appimage-run
       alsa-utils
+      playerctl
 
       #Development packages
       github-desktop
