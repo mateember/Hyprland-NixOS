@@ -18,12 +18,9 @@
     bluetooth.settings.General.Experimental = true;
 
     sane = {
-
-    enable = true;
-    extraBackends = [pkgs.sane-airscan];
-    openFirewall = true;
-
-
+      enable = true;
+      extraBackends = [pkgs.sane-airscan];
+      openFirewall = true;
     };
     #  xone.enable = true;
     #  xpadneo.enable = true;
