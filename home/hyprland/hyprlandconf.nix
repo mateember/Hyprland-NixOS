@@ -28,6 +28,7 @@
     exec=swww-daemon;swww img $HOME/Pictures/háttér/bing.jpg
 
 
+
     ####ENVIRONMENT
 
     env = XCURSOR_SIZE,24
@@ -36,7 +37,7 @@
     env = HYPRCURSOR_SIZE,24
     env = QT_QPA_PLATFORMTHEME,qt6ct
     env = QT_QPA_PLATFORM,wayland
-    env = XDG_MENU_PREFIX,arch- kbuildsycoca6
+    env = XDG_MENU_PREFIX,plasma-
     env = TERM,alacritty
 
 

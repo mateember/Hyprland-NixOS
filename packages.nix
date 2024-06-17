@@ -14,6 +14,20 @@
     ./pkgs
   ];
 
+  programs = {
+    zsh.enable = true;
+    steam.enable = true;
+    xfconf.enable = true;
+    thunar = {
+      enable = true;
+      plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+        thunar-volman
+        thunar-media-tags-plugin
+      ];
+    };
+  };
+
   # System packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages =
@@ -38,6 +52,7 @@
       kdePackages.extra-cmake-modules
       pavucontrol
       sddm-kcm
+      appimage-run
 
       #Development packages
       llvm
@@ -51,6 +66,8 @@
       lld
       elfutils
       nix-prefetch-git
+      curl
+      libxml2
     ])
     ++ (with pkgs-unstable; [
       bat

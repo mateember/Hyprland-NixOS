@@ -152,25 +152,43 @@
     shell = pkgs.zsh;
   };
 
-  #Program setings
-  programs = {
-    zsh.enable = true;
-    steam.enable = true;
-  };
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
   # Services & SystemD
 
-  systemd.packages = with pkgs-unstable; [lact];
-  systemd.services.lactd = {
-    enable = true; # this is true by default
-    wantedBy = ["multi-user.target"]; # add this if you want the unit to auto start at boot time
+  systemd = {
+    packages = with pkgs-unstable; [lact];
+
+    services = {
+      lactd = {
+        enable = true; # this is true by default
+        wantedBy = ["multi-user.target"]; # add this if you want the unit to auto start at boot time
+      };
+
+      "bingpaper" = {
+        enable = true;
+        description = "bingpaper";
+        after = ["network-online.target"];
+        wants = ["network-online.target"];
+
+        script = ''/home/mate/.scripts/get-wallpaper.sh'';
+
+        path = [pkgs.curl pkgs.libxml2];
+
+        wantedBy = ["multi-user.target"];
+      };
+    };
+
+    timers = {
+      "bingpaper" = {
+        description = "Get the Bing wallpaper";
+        wantedBy = ["timers.target"];
+
+        timerConfig = {
+          OnCalendar = "*-*-* 06:00:00";
+          Persistent = true;
+          Unit = "bingpaper.service";
+        };
+      };
+    };
   };
 
   services = {
@@ -204,6 +222,9 @@
     };
 
     blueman.enable = true;
+
+    gvfs.enable = true;
+    tumbler.enable = true;
 
     tailscale.enable = true;
     tailscale.useRoutingFeatures = "client";
@@ -245,12 +266,14 @@
     };
   };
 
-  xdg.portal = {
-    enable = true;
-    config.common.default = "*";
-    extraPortals = [pkgs.xdg-desktop-portal-kde pkgs.xdg-desktop-portal-gtk];
+  xdg = {
+    menus.enable = true;
+    portal = {
+      enable = true;
+      config.common.default = "*";
+      extraPortals = [pkgs.xdg-desktop-portal-kde pkgs.xdg-desktop-portal-gtk];
+    };
   };
-
   #Sudo
   security.sudo = {
     enable = true;
