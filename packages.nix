@@ -45,10 +45,11 @@
       kdePackages.extra-cmake-modules
       pavucontrol
       sddm-kcm
-      appimage-
+      appimage-run
       alsa-utils
 
       #Development packages
+      github-desktop
       llvm
       clang
       git
