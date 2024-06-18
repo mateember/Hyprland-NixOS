@@ -59,8 +59,9 @@
   #grub&boot
   boot = {
     kernelPackages = pkgs.linuxPackages_cachyos;
-    extraModulePackages = with config.boot.kernelPackages; [xpadneo xone];
-    blacklistedKernelModules = ["xpad"];
+
+    extraModulePackages = with config.boot.kernelPackages; [xpadneo];
+    blacklistedKernelModules = ["xpad xone"];
     initrd.kernelModules = ["amdgpu"];
     kernelParams = ["amdgpu.ppfeaturemask=0xfff7ffff"];
     loader = {
@@ -116,8 +117,8 @@
       routes = [
         {
           routeConfig = {
-            InitialCongestionWindow = 10;
-            InitialAdvertisedReceiveWindow = 10;
+            InitialCongestionWindow = 30;
+            InitialAdvertisedReceiveWindow = 70;
           };
         }
       ];
