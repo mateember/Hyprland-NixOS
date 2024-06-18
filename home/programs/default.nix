@@ -39,6 +39,7 @@
       swww
       waybar
       distrobox
+      wl-clipboard
       cliphist
     ]);
 
