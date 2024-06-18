@@ -7,6 +7,9 @@
     ./hyprland
     ./programs
     ./shell
+    ./waybar
+    ./dunst
+    ./rofi
   ];
 
   # Home Manager needs a bit of information about you and the
