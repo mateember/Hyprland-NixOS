@@ -39,6 +39,7 @@
       swww
       waybar
       distrobox
+      cliphist
     ]);
 
   services.kdeconnect.enable = true;
