@@ -38,12 +38,7 @@
     '';
   };
 
- /* xdg.configFile."hypr/conf/environment.conf".source = ./conf/environment.conf;
-  xdg.configFile."hypr/conf/autostart.conf".source = ./conf/autostart.conf;
-  xdg.configFile."hypr/conf/keyboard.conf".source = ./conf/keyboard.conf;
-  xdg.configFile."hypr/conf/looks.conf".source = ./conf/looks.conf;
-  xdg.configFile."hypr/conf/windowrules.conf".source = ./conf/windowrules.conf;*/
-   xdg.configFile."hypr/conf".source = ./conf/;
+  xdg.configFile."hypr/conf".source = ./conf;
   xdg.configFile."hypr/hyprestart.sh".source = ./hyprestart.sh;
   xdg.configFile."hypr/hypridle.conf".source = ./hypridle.conf;
   xdg.configFile."hypr/hyprlock.conf".source = ./hyprlock.conf;
