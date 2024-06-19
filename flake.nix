@@ -24,6 +24,7 @@
   }: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
+    lib-unstable = nixpkgs-unstable.lib;
     pkgs = import nixpkgs {
       config.allowUnfree = true;
       localSystem = {inherit system;};

@@ -14,9 +14,6 @@
       hypridle
       hyprpicker
       hyprcursor
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-gtk
       git-credential-oauth
       ranger
       glxinfo

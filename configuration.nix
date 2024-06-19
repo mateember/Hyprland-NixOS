@@ -228,7 +228,7 @@
       defaultSession = "hyprland";
       sddm.theme = "sddm-theme-bluish";
       sddm.wayland.enable = true;
-      #sddm.extraPackages = [pkgs.kdePackages.kdecoration pkgs.kdePackages.sddm-kcm pkgs.libsForQt5.sddm-kcm pkgs.libsForQt5.sddm];
+
       autoLogin = {
         enable = false;
         user = "mate";
@@ -247,6 +247,7 @@
     printing.enable = true;
     printing.drivers = [pkgs.epson-escpr];
   };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   networking.firewall = {
@@ -286,7 +287,7 @@
       xdgOpenUsePortal = true;
       enable = true;
       config.common.default = "gnome";
-      extraPortals = [pkgs.xdg-desktop-portal-kde pkgs.xdg-desktop-portal-gtk hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland];
+      extraPortals = [pkgs-unstable.kdePackages.xdg-desktop-portal-kde pkgs-unstable.xdg-desktop-portal-gtk hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland];
     };
   };
   #Sudo

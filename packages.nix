@@ -18,6 +18,7 @@
     zsh.enable = true;
     steam.enable = true;
     xfconf.enable = true;
+    dconf.enable = true;
     nix-ld = {
       enable = true;
       package = pkgs.nix-ld-rs;
@@ -28,7 +29,7 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages =
     (with pkgs; [
-      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      vim
       wget
       nano
       firefox
@@ -47,7 +48,7 @@
       podman-compose
       kdePackages.extra-cmake-modules
       pavucontrol
-      sddm-kcm
+
       appimage-run
       alsa-utils
       playerctl
