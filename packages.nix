@@ -18,6 +18,10 @@
     zsh.enable = true;
     steam.enable = true;
     xfconf.enable = true;
+    nix-ld = {
+      enable = true;
+      package = pkgs.nix-ld-rs;
+    };
   };
 
   # System packages

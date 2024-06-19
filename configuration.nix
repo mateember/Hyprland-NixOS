@@ -283,8 +283,9 @@
   xdg = {
     menus.enable = true;
     portal = {
+      xdgOpenUsePortal = true;
       enable = true;
-      config.common.default = "*";
+      config.common.default = "gnome";
       extraPortals = [pkgs.xdg-desktop-portal-kde pkgs.xdg-desktop-portal-gtk hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland];
     };
   };
