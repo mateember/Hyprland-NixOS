@@ -287,7 +287,7 @@
       xdgOpenUsePortal = true;
       enable = true;
       config.common.default = "gnome";
-      extraPortals = [pkgs-unstable.kdePackages.xdg-desktop-portal-kde pkgs-unstable.xdg-desktop-portal-gtk hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland];
+      extraPortals = [pkgs-unstable.kdePackages.xdg-desktop-portal-kde pkgs-unstable.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
     };
   };
   #Sudo

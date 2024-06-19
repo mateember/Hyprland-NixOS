@@ -38,7 +38,7 @@
     '';
   };
 
-  xdg.configFile."hypr/conf".source = ./conf;
+ /* xdg.configFile."hypr/conf".source = ./conf;
   xdg.configFile."hypr/hyprestart.sh".source = ./hyprestart.sh;
   xdg.configFile."hypr/hypridle.conf".source = ./hypridle.conf;
   xdg.configFile."hypr/hyprlock.conf".source = ./hyprlock.conf;
@@ -46,4 +46,5 @@
   xdg.configFile."hypr/hyprshade.toml".source = ./hyprshade.toml;
   xdg.configFile."hypr/idle.sh".source = ./idle.sh;
   xdg.configFile."hypr/mocha.conf".source = ./mocha.conf;
+  */
 }
