@@ -4,7 +4,6 @@
     (callPackage ./sddm-sugarcandy {}).sddm-sugarcandy
   ];
 
-
   nixpkgs.overlays = [
     #(import ./overlays/xone.nix)
   ];
