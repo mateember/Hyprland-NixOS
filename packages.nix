@@ -7,7 +7,7 @@
   ...
 }: {
   #Chaotic AUR
-  chaotic.mesa-git.enable = true;
+  chaotic.mesa-git.enable = false;
 
   imports = [
     # Include the results of the hardware scan.
