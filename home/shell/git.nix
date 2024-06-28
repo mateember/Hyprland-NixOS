@@ -5,5 +5,5 @@
     userEmail = "...";
   };
   #programs.git-credential-oauth.enable = true;
-  programs.gh.enable = false;
+  programs.gh.enable = true;
 }

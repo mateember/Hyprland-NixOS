@@ -38,7 +38,8 @@
     '';
   };
 
- /* xdg.configFile."hypr/conf".source = ./conf;
+  /*
+    xdg.configFile."hypr/conf".source = ./conf;
   xdg.configFile."hypr/hyprestart.sh".source = ./hyprestart.sh;
   xdg.configFile."hypr/hypridle.conf".source = ./hypridle.conf;
   xdg.configFile."hypr/hyprlock.conf".source = ./hyprlock.conf;

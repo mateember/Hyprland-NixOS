@@ -34,6 +34,7 @@
       package32 = pkgs-unstable.pkgsi686Linux.mesa.drivers;
     };
     */
+
   };
 
   #flake and nix setting
@@ -58,10 +59,10 @@
 
   #grub&boot
   boot = {
-    kernelPackages = pkgs.linuxPackages_cachyos;
+    kernelPackages = pkgs.linuxPackages_cachyos-lto;
 
-    extraModulePackages = with config.boot.kernelPackages; [xpadneo];
-    blacklistedKernelModules = ["xpad xone"];
+    extraModulePackages = with config.boot.kernelPackages; [xpadneo ];
+    blacklistedKernelModules = ["xpad"];
     initrd.kernelModules = ["amdgpu"];
     kernelParams = ["amdgpu.ppfeaturemask=0xfff7ffff"];
     loader = {
@@ -116,10 +117,8 @@
       networkConfig.DNS = "192.168.1.173";
       routes = [
         {
-          routeConfig = {
-            InitialCongestionWindow = 30;
-            InitialAdvertisedReceiveWindow = 70;
-          };
+          InitialCongestionWindow = 30;
+          InitialAdvertisedReceiveWindow = 70;
         }
       ];
       linkConfig.RequiredForOnline = "routable";

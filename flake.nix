@@ -7,7 +7,8 @@
     nur.url = "github:nix-community/NUR";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      #url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -37,7 +38,7 @@
     };
   in {
     nixosConfigurations = {
-      matenix = lib.nixosSystem {
+      matenix = lib-unstable.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
