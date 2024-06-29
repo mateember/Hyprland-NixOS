@@ -68,6 +68,7 @@
       nix-prefetch-git
       curl
       libxml2
+      
     ])
     ++ (with pkgs-unstable; [
       bat

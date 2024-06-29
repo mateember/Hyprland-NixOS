@@ -2,10 +2,10 @@
   environment.systemPackages = with pkgs; [
     (callPackage ./sddm-bluish {}).sddm-bluish
     (callPackage ./sddm-sugarcandy {}).sddm-sugarcandy
-    (callPackage ./xone {}).xone
+    #(callPackage ./xone {}).xone
   ];
 
   nixpkgs.overlays = [
-    #(import ./overlays/xone.nix)
+  (import ./overlays/xone.nix)
   ];
 }

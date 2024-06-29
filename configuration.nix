@@ -60,7 +60,7 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_cachyos-lto;
 
-    extraModulePackages = with config.boot.kernelPackages; [xpadneo];
+    extraModulePackages = with config.boot.kernelPackages; [xpadneo  pkgs.linuxPackages_cachyos-lto.xone];
     blacklistedKernelModules = ["xpad"];
     initrd.kernelModules = ["amdgpu"];
     kernelParams = ["amdgpu.ppfeaturemask=0xfff7ffff"];
