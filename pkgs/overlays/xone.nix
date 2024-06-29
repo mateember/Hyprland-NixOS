@@ -1,5 +1,5 @@
 final: prev: {
- linuxPackages_cachyos-lto = prev.linuxPackages_cachyos-lto.extend (lpself: lpsuper: {
+ linuxPackages = prev.linuxPackages.extend (lpself: lpsuper: {
     xone = lpsuper.xone.overrideAttrs (oldAttrs: rec {
       nativeBuildInputs = oldAttrs.nativeBuildInputs or [] ++ [ final.gcc ];
 
