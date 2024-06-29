@@ -118,7 +118,7 @@
         {
           InitialCongestionWindow = 30;
           InitialAdvertisedReceiveWindow = 70;
-          TCPCongestionControlAlgorithm = "bbr";
+          #TCPCongestionControlAlgorithm = "bbr";
         }
       ];
       linkConfig.RequiredForOnline = "routable";

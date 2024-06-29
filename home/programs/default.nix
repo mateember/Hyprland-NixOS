@@ -2,18 +2,13 @@
   config,
   pkgs,
   pkgs-unstable,
+  hyprland,
   ...
 }: {
   home.packages =
     (with pkgs; [
       dunst
-      hyprpaper
-      hyprshade
-      hyprshot
-      hyprlock
-      hypridle
-      hyprpicker
-      hyprcursor
+
       git-credential-oauth
       ranger
       glxinfo
@@ -38,6 +33,13 @@
       distrobox
       wl-clipboard
       cliphist
+      # hyprcursor
+      hyprshade
+      hyprshot
+      hyprlock
+      hypridle
+      hyprpicker
+      jetbrains-toolbox
     ]);
 
   services.kdeconnect.enable = true;
